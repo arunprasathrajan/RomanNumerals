@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace RomanAPI\Events;
 
 abstract class Event
 {

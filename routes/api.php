@@ -16,3 +16,13 @@ use Illuminate\Http\Request;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
+
+// route for top 10 recent serached records
+Route::get('/top', 'RomanController@recentSearches');
+
+// route for converting the guven number to Roman number
+Route::get('/{integer}', 'RomanController@index');
+
+// route to display all the records from the storage
+Route::get('/', 'RomanController@showAll');
+
